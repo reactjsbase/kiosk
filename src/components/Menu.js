@@ -1,24 +1,21 @@
-import Item from "./Item";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Container, Tab, Tabs } from "react-bootstrap";
+import MenuList from "./MenuList";
 
-
-// 메뉴 컨테이너
 function Menu() {
   return (
-    <>
-      <Navbar bg="black" variant="dark">
-        <Container>
-          <Nav className="menu">
-            <Nav.Link href="#yogurt">그릭요거트</Nav.Link>
-            <Nav.Link href="#smoothie">요거트스무디</Nav.Link>
-            <Nav.Link href="#coffee">커피</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-      <Item />
-    </>
+    <Container className="p-3">
+      <Tabs defaultActiveKey="yogurt" className="mb-3">
+        <Tab eventKey="yogurt" title="그릭요거트">
+          <MenuList />
+        </Tab>
+        <Tab eventKey="smoothie" title="요거트스무디">
+          <MenuList />
+        </Tab>
+        <Tab eventKey="coffee" title="커피">
+          <MenuList />
+        </Tab>
+      </Tabs>
+    </Container>
   );
 }
 
