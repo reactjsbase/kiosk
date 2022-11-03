@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 
 function Payment() {
@@ -26,11 +26,12 @@ const OnFirstPage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3065ac;
+  background-color: #222222;
   position: absolute;
   bottom: 0;
   h1{
-    color: #000;
+    color: #fff;
+    font-weight: 600;
   }
 `;
 
@@ -40,7 +41,8 @@ const BannerDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
+  background-color: #222222;
+  color: #fff;
 `;
 
 
