@@ -16,7 +16,7 @@ function CartItem({ name, price }) {
   }
 
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card>
       <Row className="g-0">
         <Col md="5">
           <Image className="rounded-start" src="holder.js/100px180" />
