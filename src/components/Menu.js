@@ -4,7 +4,7 @@ import MenuList from "./MenuList";
 function Menu() {
   return (
     <Container className="p-3">
-      <Tabs defaultActiveKey="yogurt" className="mb-3">
+      <Tabs defaultActiveKey="yogurt" className="mb-3 h3">
         <Tab eventKey="yogurt" title="그릭요거트">
           <MenuList />
         </Tab>
