@@ -1,24 +1,25 @@
-import React, { useState } from 'react' 
-import Nav from './components/Nav';
-import './App.css'
-import {
-BrowserRouter as Router, Switch, Route,
-} from "react-router-dom";
+import { getValue } from "@testing-library/user-event/dist/utils";
+import { Col, Container } from "react-bootstrap";
+import CartItem from "./CartItem";
+import Option from "./Option";
+
 function ConfirmItem() {
-const [cartItems, setCartItems] = useState(initialState.cartItems);
-return (
-<Router>
-<Nav cartItems={cartItems}/>
-<Switch>
-<Route exact={true} path="/">
-<ItemListContainer items={items} setCartItems={setCartItems} cartItems={cartItems }/>
-{/* props로 배열 전달 */}
-</Route>
-<Route path=" /Cart">
-<ShoppingCart cartItems={cartItems} items={items} setCartItems={setCartItems}/>
-</Route>
-</Switch>
-</Router>
-);
+  return (
+    <div style={{background: "AntiqueWhite" }}>
+       
+      <Container className="p-3">
+        <h3>주문내역 컴포넌트</h3>
+        
+          {Array.from({ length:1}).map((_, idx) => (
+            <Col key={idx}>
+              <CartItem />
+              <Option />
+            </Col>
+          ))}
+       
+      </Container>
+    </div>
+  );
 }
+
 export default ConfirmItem;
