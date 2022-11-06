@@ -23,7 +23,6 @@ function Option({ name, price }) {
         </Col>
         <Col>
           <Card.Body>
-            
             <Card.Title>{name}</Card.Title>
             <Card.Text>{(price * quantity).toLocaleString()}원</Card.Text>
             <NumberSpinner value={quantity} onChange={onChange} />
