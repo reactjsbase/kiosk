@@ -1,10 +1,9 @@
 import { Card } from "react-bootstrap";
 import { useEffect } from "react";
 import { run } from "holderjs";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function Item({ name, price }) {
+function Item({ data = { title: "요거트", price: 5000 } }) {
   useEffect(() => {
     run();
   });
@@ -13,22 +12,12 @@ function Item({ name, price }) {
     <Card>
       <Card.Img height={180} variant="top" src="holder.js/100px180" />
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>{price.toLocaleString()}원</Card.Text>
+        <Card.Title>{data.title}</Card.Title>
+        <Card.Text>{data.price.toLocaleString()}원</Card.Text>
       </Card.Body>
       <Link to="/options" className="stretched-link" />
     </Card>
   );
 }
-
-Item.propTypes = {
-  name: PropTypes.string,
-  price: PropTypes.number,
-};
-
-Item.defaultProps = {
-  name: "요거트",
-  price: 5000,
-};
 
 export default Item;
