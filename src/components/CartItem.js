@@ -1,17 +1,17 @@
 import { Card, CloseButton, Col, Image, Row } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { run } from "holderjs";
-import PropTypes from "prop-types";
 import NumberSpinner from "./NumberSpinner";
+// import menuData from "../data/menuData.json";
 
-function CartItem({ name, price }) {
+function CartItem({ index, data, onRemove }) {
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     run();
   });
 
-  function onChange(value) {
+  function handleChange(value) {
     setQuantity(value);
   }
 
@@ -24,26 +24,19 @@ function CartItem({ name, price }) {
         <Col>
           <Card.Body>
             <Card.Text>
-              <CloseButton className="float-end" />
+              <CloseButton
+                className="float-end"
+                onClick={() => onRemove(index)}
+              />
             </Card.Text>
-            <Card.Title>{name}</Card.Title>
-            <Card.Text>{(price * quantity).toLocaleString()}원</Card.Text>
-            <NumberSpinner value={quantity} onChange={onChange} />
+            <Card.Title>{data.title}</Card.Title>
+            <Card.Text>{(data.price * quantity).toLocaleString()}원</Card.Text>
+            <NumberSpinner value={quantity} onChange={handleChange} />
           </Card.Body>
         </Col>
       </Row>
     </Card>
   );
 }
-
-CartItem.propTypes = {
-  name: PropTypes.string,
-  price: PropTypes.number,
-};
-
-CartItem.defaultProps = {
-  name: "요거트",
-  price: 5000,
-};
 
 export default CartItem;

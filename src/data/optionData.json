@@ -1,37 +1,30 @@
 [
   {
-    "id": 100,
     "title": "잼 & 꿀",
     "items": [
       {
-        "id": 101,
         "title": "딸기청",
         "price": 600
       },
       {
-        "id": 102,
         "title": "망고잼",
         "price": 600
       }
     ]
   },
   {
-    "id": 200,
     "title": "그래놀라",
     "items": []
   },
   {
-    "id": 300,
     "title": "시리얼",
     "items": []
   },
   {
-    "id": 400,
     "title": "과일",
     "items": []
   },
   {
-    "id": 500,
     "title": "견과류 & 기타",
     "items": []
   }
