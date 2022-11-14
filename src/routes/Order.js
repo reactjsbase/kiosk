@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button, Row, Container, Stack } from "react-bootstrap";
+import { Button, Container, Stack } from "react-bootstrap";
 import Banner from "../components/Banner";
 import Cart from "../components/Cart";
 import Menu from "../components/Menu";
@@ -11,25 +11,23 @@ function Order({ cart, addCartItem, removeCartItem }) {
     <>
       <Banner />
       <Menu addCartItem={addCartItem} />
-      <Cart cart={cart} removeCartItem={removeCartItem} />
-      <Container fluid className="fixed-bottom bottom-0 bg-white">
+      <Container fluid className="p-0 fixed-bottom bottom-0 bg-white">
+        <Cart cart={cart} removeCartItem={removeCartItem} />
         <Stack gap={3} className="p-3">
-          <Row>
-            <Button variant="outline-danger" size="lg">
-              취소
-            </Button>
-          </Row>
-          <Row>
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={() => {
-                navigate("/payment");
-              }}
-            >
-              결제
-            </Button>
-          </Row>
+          <Button
+            variant="outline-danger"
+            size="lg"
+            onClick={() => navigate("/")}
+          >
+            취소
+          </Button>
+          <Button
+            variant="primary"
+            size="lg"
+            onClick={() => navigate("/confirm")}
+          >
+            결제
+          </Button>
         </Stack>
       </Container>
     </>
