@@ -1,6 +1,6 @@
 import { Button, Modal } from "react-bootstrap";
-import CartItem from "../components/CartItem";
-import Option from "../components/Option";
+import CartItem from "./CartItem";
+import Option from "./Option";
 
 // 옵션 리스트 보여주는 화면
 function Options({ itemData, onAdd, ...props }) {
