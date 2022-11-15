@@ -9,23 +9,139 @@
       {
         "title": "망고잼",
         "price": 600
+      },
+      {
+        "title": "라즈베리잼",
+        "price": 600
+      },
+      {
+        "title": "사과잼",
+        "price": 600
+      },
+      {
+        "title": "복숭아잼",
+        "price": 600
+      },
+      {
+        "title": "꿀",
+        "price": 0
       }
     ]
   },
   {
     "title": "그래놀라",
-    "items": []
+    "items": [
+      {
+        "title": "그래놀라",
+        "price": 500
+      },
+      {
+        "title": "초코그래놀라",
+        "price": 700
+      },
+      {
+        "title": "애플시나몬그래놀라",
+        "price": 700
+      }
+    ]
   },
   {
     "title": "시리얼",
-    "items": []
+    "items": [
+      {
+        "title": "오트",
+        "price": 500
+      },
+      {
+        "title": "첵스",
+        "price": 500
+      },
+      {
+        "title": "콘프로스트",
+        "price": 500
+      }
+    ]
   },
   {
     "title": "과일",
-    "items": []
+    "items": [
+      {
+        "title": "망고",
+        "price": 500
+      },
+      {
+        "title": "청포도",
+        "price": 500
+      },
+      {
+        "title": "바나나",
+        "price": 500
+      },
+      {
+        "title": "오렌지",
+        "price": 500
+      },
+      {
+        "title": "파인애플",
+        "price": 500
+      },
+      {
+        "title": "블루베리",
+        "price": 500
+      },
+      {
+        "title": "키위",
+        "price": 500
+      },
+      {
+        "title": "자몽",
+        "price": 500
+      },
+      {
+        "title": "사과",
+        "price": 500
+      }
+    ]
   },
   {
     "title": "견과류 & 기타",
-    "items": []
+    "items": [
+      {
+        "title": "허니피넛",
+        "price": 500
+      },
+      {
+        "title": "카카오닙스",
+        "price": 500
+      },
+      {
+        "title": "아몬드",
+        "price": 500
+      },
+      {
+        "title": "초코칩",
+        "price": 500
+      },
+      {
+        "title": "오레오",
+        "price": 500
+      },
+      {
+        "title": "코코넛청크",
+        "price": 500
+      },
+      {
+        "title": "캐슈넛",
+        "price": 500
+      },
+      {
+        "title": "코코넛젤리",
+        "price": 500
+      },
+      {
+        "title": "코코넛슬라이스",
+        "price": 500
+      }
+    ]
   }
 ]
