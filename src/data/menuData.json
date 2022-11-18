@@ -3,12 +3,40 @@
     "title": "그릭요거트",
     "items": [
       {
-        "title": "그릭요거트 싱글(80g)",
+        "id": "greek-single-plain",
+        "title": "그릭요거트 싱글",
+        "gram": 80,
         "price": 2500
       },
       {
-        "title": "두유 그릭요거트 싱글(80g)",
+        "id": "greek-single-soymilk",
+        "title": "두유 그릭요거트 싱글",
+        "gram": 80,
         "price": 3000
+      },
+      {
+        "id": "greek-single-greentea",
+        "title": "녹차 그릭요거트 싱글",
+        "gram": 80,
+        "price": 3000
+      },
+      {
+        "id": "greek-double-plain",
+        "title": "그릭요거트 더블",
+        "gram": 160,
+        "price": 3500
+      },
+      {
+        "id": "greek-double-soymilk",
+        "title": "두유 그릭요거트 더블",
+        "gram": 160,
+        "price": 4000
+      },
+      {
+        "id": "greek-double-greentea",
+        "title": "녹차 그릭요거트 더블",
+        "gram": 160,
+        "price": 4000
       }
     ]
   },
@@ -16,45 +44,40 @@
     "title": "소프트요거트",
     "items": [
       {
-        "title": "플레인 요거트 스몰(200g)",
+        "id": "soft-small-plain",
+        "title": "플레인 요거트 스몰",
+        "gram": 200,
         "price": 3000
       },
       {
-        "title": "플레인 요거트 미듐(300g)",
+        "id": "soft-medium-plain",
+        "title": "플레인 요거트 미듐",
+        "gram": 300,
         "price": 3500
       },
       {
-        "title": "플레인 요거트 라지(400g)",
+        "id": "soft-large-plain",
+        "title": "플레인 요거트 라지",
+        "gram": 400,
         "price": 4000
       },
       {
-        "title": "두유 요거트 스몰(200g)",
+        "id": "soft-small-soymilk",
+        "title": "두유 요거트 스몰",
+        "gram": 200,
         "price": 3500
       },
       {
-        "title": "두유 요거트 미듐(300g)",
+        "id": "soft-medium-soymilk",
+        "title": "두유 요거트 미듐",
+        "gram": 300,
         "price": 4000
       },
       {
-        "title": "두유 요거트 라지(400g)",
+        "id": "soft-large-soymilk",
+        "title": "두유 요거트 라지",
+        "gram": 400,
         "price": 4500
-      }
-    ]
-  },
-  {
-    "title": "커피",
-    "items": [
-      {
-        "title": "아메리카노",
-        "price": 3000
-      },
-      {
-        "title": "카페라떼",
-        "price": 3500
-      },
-      {
-        "title": "바닐라라떼",
-        "price": 4000
       }
     ]
   }
