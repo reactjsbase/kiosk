@@ -4,9 +4,11 @@ import CartItem from "./CartItem";
 // 장바구니 컨테이너
 function Cart({ cart, removeCartItem }) {
   return (
-    <div style={{ background: "AntiqueWhite" }}>
+    <div style={{ background: "SeaGreen" }}>
       <Container className="p-3">
-        <h2>카트</h2>
+        <h2 style={{ color: "white" }}>
+          <strong>카트</strong>
+        </h2>
         <Row
           xs={2}
           lg={3}
