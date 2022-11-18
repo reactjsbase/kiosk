@@ -1,13 +1,7 @@
 import { Card } from "react-bootstrap";
-import { useEffect } from "react";
-import { run } from "holderjs";
 import bowl from "../images/bowl.png";
 
 function Item({ data, onClick }) {
-  useEffect(() => {
-    run();
-  });
-
   return (
     <Card onClick={() => onClick(data)}>
       <div style={{ position: "relative" }}>
