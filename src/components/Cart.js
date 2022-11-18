@@ -10,6 +10,7 @@ function Cart({ cart, removeCartItem }) {
           <strong>카트</strong>
         </h2>
         <Row
+          style={{ height: 212 }}
           xs={2}
           lg={3}
           xxl={4}

@@ -30,7 +30,7 @@ function Menu({ addCartItem }) {
 
   return (
     <Container className="p-3">
-      <Tabs defaultActiveKey={0} className="mb-3">
+      <Tabs justify defaultActiveKey={0} className="mb-3">
         {menuData.map((category, index) => (
           <Tab key={index} eventKey={index} title={category.title}>
             <MenuList items={category.items} onItemClick={handleItemClick} />

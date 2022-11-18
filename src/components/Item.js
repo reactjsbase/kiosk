@@ -7,7 +7,7 @@ function Item({ data, onClick }) {
       <div style={{ position: "relative" }}>
         <Card.Img
           src={bowl}
-          height={180}
+          height={160}
           style={{
             objectFit: "contain",
             background: "WhiteSmoke",
@@ -16,7 +16,7 @@ function Item({ data, onClick }) {
         />
         <div style={{ position: "absolute", top: 0 }}>
           <Card.Img
-            height={180}
+            height={160}
             style={{ objectFit: "contain" }}
             src={require(`../images/${data.id}.png`)}
           />
