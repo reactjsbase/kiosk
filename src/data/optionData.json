@@ -1,30 +1,36 @@
 [
   {
-    "title": "잼 & 꿀",
+    "title": "잼",
     "items": [
       {
+        "id": "jam-strawberry",
         "title": "딸기청",
         "price": 600
       },
       {
+        "id": "jam-mango",
         "title": "망고잼",
         "price": 600
       },
       {
+        "id": "jam-raspberry",
         "title": "라즈베리잼",
         "price": 600
       },
       {
+        "id": "jam-apple",
         "title": "사과잼",
         "price": 600
       },
       {
+        "id": "jam-peach",
         "title": "복숭아잼",
         "price": 600
       },
       {
+        "id": "jam-honey",
         "title": "꿀",
-        "price": 0
+        "price": 600
       }
     ]
   },
@@ -32,33 +38,19 @@
     "title": "그래놀라",
     "items": [
       {
+        "id": "granola-plain",
         "title": "그래놀라",
         "price": 500
       },
       {
+        "id": "granola-chocolate",
         "title": "초코그래놀라",
         "price": 700
       },
       {
+        "id": "granola-applecinnamon",
         "title": "애플시나몬그래놀라",
         "price": 700
-      }
-    ]
-  },
-  {
-    "title": "시리얼",
-    "items": [
-      {
-        "title": "오트",
-        "price": 500
-      },
-      {
-        "title": "첵스",
-        "price": 500
-      },
-      {
-        "title": "콘프로스트",
-        "price": 500
       }
     ]
   },
@@ -66,80 +58,48 @@
     "title": "과일",
     "items": [
       {
+        "id": "fruit-mango",
         "title": "망고",
         "price": 500
       },
       {
+        "id": "fruit-whitegrape",
         "title": "청포도",
         "price": 500
       },
       {
+        "id": "fruit-banana",
         "title": "바나나",
         "price": 500
       },
       {
+        "id": "fruit-orange",
         "title": "오렌지",
         "price": 500
       },
       {
+        "id": "fruit-pineapple",
         "title": "파인애플",
         "price": 500
       },
       {
+        "id": "fruit-blueberry",
         "title": "블루베리",
         "price": 500
       },
       {
+        "id": "fruit-kiwi",
         "title": "키위",
         "price": 500
       },
       {
+        "id": "fruit-grapefruit",
         "title": "자몽",
         "price": 500
       },
       {
+        "id": "fruit-apple",
         "title": "사과",
-        "price": 500
-      }
-    ]
-  },
-  {
-    "title": "견과류 & 기타",
-    "items": [
-      {
-        "title": "허니피넛",
-        "price": 500
-      },
-      {
-        "title": "카카오닙스",
-        "price": 500
-      },
-      {
-        "title": "아몬드",
-        "price": 500
-      },
-      {
-        "title": "초코칩",
-        "price": 500
-      },
-      {
-        "title": "오레오",
-        "price": 500
-      },
-      {
-        "title": "코코넛청크",
-        "price": 500
-      },
-      {
-        "title": "캐슈넛",
-        "price": 500
-      },
-      {
-        "title": "코코넛젤리",
-        "price": 500
-      },
-      {
-        "title": "코코넛슬라이스",
         "price": 500
       }
     ]
