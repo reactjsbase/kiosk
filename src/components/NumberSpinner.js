@@ -13,11 +13,19 @@ function NumberSpinner({ value, min, max, onChange, ...props }) {
 
   return (
     <InputGroup {...props}>
-      <Button variant="outline-secondary" onClick={onDecrease}>
+      <Button
+        variant="outline-secondary"
+        onClick={onDecrease}
+        className="d-flex align-items-center"
+      >
         <BsDash />
       </Button>
       <Form.Control className="text-center" value={value} readOnly />
-      <Button variant="outline-secondary" onClick={onIncrease}>
+      <Button
+        variant="outline-secondary"
+        onClick={onIncrease}
+        className="d-flex align-items-center"
+      >
         <BsPlus />
       </Button>
     </InputGroup>
