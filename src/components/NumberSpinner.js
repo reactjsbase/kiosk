@@ -2,7 +2,7 @@ import { Button, Form, InputGroup } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { BsDash, BsPlus } from "react-icons/bs";
 
-function NumberSpinner({ value, min, max, onChange }) {
+function NumberSpinner({ value, min, max, onChange, ...props }) {
   function onIncrease(e) {
     if (value < max) onChange(++value);
   }
@@ -12,7 +12,7 @@ function NumberSpinner({ value, min, max, onChange }) {
   }
 
   return (
-    <InputGroup>
+    <InputGroup {...props}>
       <Button variant="outline-secondary" onClick={onDecrease}>
         <BsDash />
       </Button>

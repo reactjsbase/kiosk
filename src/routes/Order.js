@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button, Container, Stack } from "react-bootstrap";
+import { Button, Stack } from "react-bootstrap";
 import Banner from "../components/Banner";
 import Cart from "../components/Cart";
 import Menu from "../components/Menu";
@@ -8,10 +8,10 @@ function Order({ cart, addCartItem, removeCartItem }) {
   const navigate = useNavigate();
 
   return (
-    <>
+    <div className="vh-100 d-flex flex-column">
       <Banner />
       <Menu addCartItem={addCartItem} />
-      <Container fluid className="p-0 fixed-bottom bottom-0 bg-white">
+      <div>
         <Cart cart={cart} removeCartItem={removeCartItem} />
         <Stack gap={3} className="p-3">
           <Button
@@ -29,8 +29,8 @@ function Order({ cart, addCartItem, removeCartItem }) {
             결제
           </Button>
         </Stack>
-      </Container>
-    </>
+      </div>
+    </div>
   );
 }
 

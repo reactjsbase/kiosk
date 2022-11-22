@@ -1,4 +1,4 @@
-import { Container, Tab, Tabs } from "react-bootstrap";
+import { Container, Nav, Tab } from "react-bootstrap";
 import MenuList from "./MenuList";
 import menuData from "../data/menuData.json";
 import Options from "./Option";
@@ -29,14 +29,34 @@ function Menu({ addCartItem }) {
   }
 
   return (
-    <Container className="p-3">
-      <Tabs defaultActiveKey={0} className="mb-3">
-        {menuData.map((category, index) => (
-          <Tab key={index} eventKey={index} title={category.title}>
-            <MenuList items={category.items} onItemClick={handleItemClick} />
-          </Tab>
-        ))}
-      </Tabs>
+    <Container className="p-3 d-flex flex-column flex-fill">
+      <Tab.Container defaultActiveKey={0}>
+        <Nav className="mb-3" variant="tabs">
+          {menuData.map((category, index) => (
+            <Nav.Item key={index}>
+              <Nav.Link eventKey={index}>{category.title}</Nav.Link>
+            </Nav.Item>
+          ))}
+        </Nav>
+
+        <Tab.Content className="h-100">
+          {menuData.map((category, index) => (
+            <Tab.Pane
+              className="h-100 position-relative"
+              key={index}
+              eventKey={index}
+              style={{ overflowX: "hidden" }}
+            >
+              <div className="position-absolute">
+                <MenuList
+                  items={category.items}
+                  onItemClick={handleItemClick}
+                />
+              </div>
+            </Tab.Pane>
+          ))}
+        </Tab.Content>
+      </Tab.Container>
       <Options
         itemData={itemData}
         show={modalShow}
