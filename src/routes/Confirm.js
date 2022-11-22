@@ -7,19 +7,18 @@ function Confirm(props) {
   const navigate = useNavigate();
   return (
     <>
-    <div className="vh-100 d-flex flex-column">
-    
-      <Banner />
-      
-      <h2>주문확인</h2>
-      {/* 주문내역 컨테이너, 아래는 주문내역 컴포넌트 예시 */}
-      <ConfirmItem {...props} />
-        <div>
+      <div className="vh-100 d-flex flex-column">
+        <Banner />
+
+        <h2>주문확인</h2>
+        {/* 주문내역 컨테이너, 아래는 주문내역 컴포넌트 예시 */}
+        <ConfirmItem {...props} />
+
         <Stack gap={3} className="p-3">
           <Button
             variant="outline-danger"
             size="lg"
-            onClick={() => navigate("/order")}       
+            onClick={() => navigate("/order")}
           >
             취소
           </Button>
@@ -31,8 +30,7 @@ function Confirm(props) {
             결제
           </Button>
         </Stack>
-        </div>
-     </div> 
+      </div>
     </>
   );
 }
