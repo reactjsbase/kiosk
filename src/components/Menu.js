@@ -1,7 +1,7 @@
 import { Container, Tab, Tabs } from "react-bootstrap";
 import MenuList from "./MenuList";
 import menuData from "../data/menuData.json";
-import Options from "./Options";
+import Options from "./Option";
 import { useState } from "react";
 
 function Menu({ addCartItem }) {
