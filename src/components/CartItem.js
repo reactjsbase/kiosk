@@ -3,7 +3,7 @@ import { useState } from "react";
 import NumberSpinner from "./NumberSpinner";
 import bowl from "../images/bowl.png";
 
-function CartItem({ index, data, onRemove }) {
+function CartItem({ index, data, onRemove, ...props }) {
   const [quantity, setQuantity] = useState(1);
 
   function handleChange(value) {
@@ -11,7 +11,7 @@ function CartItem({ index, data, onRemove }) {
   }
 
   return (
-    <Card>
+    <Card {...props}>
       <Card.Header>
         {data.title}
         <CloseButton className="float-end" onClick={() => onRemove(index)} />
@@ -20,16 +20,14 @@ function CartItem({ index, data, onRemove }) {
         <Col xs={5}>
           <Image
             width="100%"
-            height={128}
             src={bowl}
             style={{
-              objectFit: "contain",
               background: "WhiteSmoke",
             }}
           />
         </Col>
         <Col>
-          <Card.Body style={{ height: "100%" }} className="d-flex flex-column">
+          <Card.Body className="h-100 d-flex flex-column">
             <Card.Subtitle className="mb-2 text-muted">옵션목록</Card.Subtitle>
             <NumberSpinner
               className="mt-auto"
