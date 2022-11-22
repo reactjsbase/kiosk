@@ -39,17 +39,17 @@
     "items": [
       {
         "id": "granola-plain",
-        "title": "그래놀라",
+        "title": "플레인",
         "price": 500
       },
       {
         "id": "granola-chocolate",
-        "title": "초코그래놀라",
+        "title": "초코",
         "price": 700
       },
       {
         "id": "granola-applecinnamon",
-        "title": "애플시나몬그래놀라",
+        "title": "애플시나몬",
         "price": 700
       }
     ]
