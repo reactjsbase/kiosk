@@ -10,7 +10,10 @@ function Order({ cart, addCartItem, removeCartItem }) {
   return (
     <div className="vh-100 d-flex flex-column">
       <Banner />
-      <Menu addCartItem={addCartItem} />
+      <Menu
+        addCartItem={addCartItem}
+        className="px-5 pt-4 d-flex flex-column flex-fill"
+      />
       <div>
         <Cart cart={cart} removeCartItem={removeCartItem} />
         <Stack gap={3} className="p-3">

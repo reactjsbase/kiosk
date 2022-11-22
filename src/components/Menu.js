@@ -4,7 +4,7 @@ import menuData from "../data/menuData.json";
 import Option from "./Option";
 import { useState } from "react";
 
-function Menu({ addCartItem }) {
+function Menu({ addCartItem, ...props }) {
   // 옵션창 표시 여부
   const [modalShow, setModalShow] = useState(false);
 
@@ -29,25 +29,24 @@ function Menu({ addCartItem }) {
   }
 
   return (
-    <Container className="p-3 d-flex flex-column flex-fill">
+    <Container fluid className="vh-100" {...props}>
       <Tab.Container defaultActiveKey={0}>
-        <Nav className="mb-3" variant="tabs">
+        <Nav variant="tabs">
           {menuData.map((category, index) => (
             <Nav.Item key={index}>
               <Nav.Link eventKey={index}>{category.title}</Nav.Link>
             </Nav.Item>
           ))}
         </Nav>
-
-        <Tab.Content className="h-100">
+        <Tab.Content className="h-100 position-relative">
           {menuData.map((category, index) => (
             <Tab.Pane
-              className="h-100 position-relative"
+              className="h-100 position-absolute"
               key={index}
               eventKey={index}
               style={{ overflowX: "hidden" }}
             >
-              <div className="position-absolute">
+              <div className="pt-3 pb-4">
                 <MenuList
                   items={category.items}
                   onItemClick={handleItemClick}
