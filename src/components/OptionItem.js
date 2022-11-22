@@ -8,8 +8,13 @@ function OptionItem({ data }) {
   });
 
   return (
-    <Card>
-      <Card.Img variant="" src="holder.js/100px180" />
+    <Card style={{ width: "8rem", minWidth: "8rem" }}>
+      <Card.Img
+        style={{ background: "WhiteSmoke" }}
+        width="100%"
+        variant="top"
+        src={require("../images/fruit-apple.png")}
+      />
       <Card.Body>
         <Card.Title>{data.title}</Card.Title>
         <Card.Text>{data.price.toLocaleString()}원</Card.Text>
