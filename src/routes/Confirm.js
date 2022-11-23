@@ -19,6 +19,10 @@ function Confirm({ cart, removeCartItem }) {
             ))}
           </Stack>
         </div>
+         <h3> 최종 장바구니 화면입니다.</h3>
+          <div> 총 금액</div>
+          <br />
+          <hr />
       </Container>
       <div>
         <Stack gap={3} className="p-3">
