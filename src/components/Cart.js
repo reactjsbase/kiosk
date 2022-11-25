@@ -15,6 +15,7 @@ function Cart({ cart, removeCartItem }) {
           <CartItem
             style={{ width: "20rem", minWidth: "20rem" }}
             index={index}
+            key={index}
             data={data}
             onRemove={removeCartItem}
           />
