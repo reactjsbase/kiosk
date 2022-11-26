@@ -2,18 +2,22 @@ import { Card } from "react-bootstrap";
 import { useEffect } from "react";
 import { run } from "holderjs";
 
-function OptionItem({ data }) {
+function OptionItem({ data, onClick, selected }) {
   useEffect(() => {
     run();
   });
 
   return (
-    <Card style={{ width: "8rem", minWidth: "8rem" }}>
+    <Card
+      style={{ width: "8rem", minWidth: "8rem" }}
+      onClick={() => onClick(data)}
+      border={selected ? "primary" : ""}
+    >
       <Card.Img
         style={{ background: "WhiteSmoke" }}
         width="100%"
         variant="top"
-        src={require("../images/fruit-apple.png")}
+        src={require(`../images/${data.id}.png`)}
       />
       <Card.Body>
         <Card.Title>{data.title}</Card.Title>

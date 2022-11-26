@@ -2,9 +2,16 @@ import { Button, Modal, Stack } from "react-bootstrap";
 import CartItem from "./CartItem";
 import OptionTab from "./OptionTab";
 import optionData from "../data/optionData.json";
+import { useState } from "react";
 
 // 옵션 리스트 보여주는 화면
 function Option({ itemData, onAdd, ...props }) {
+  const [options, setOptions] = useState([]);
+
+  function handleOptionClick(option) {
+    console.log(option.title);
+    setOptions((value) => [...value, option.title]);
+  }
   return (
     <Modal {...props} centered>
       <Modal.Header closeButton>
@@ -12,9 +19,13 @@ function Option({ itemData, onAdd, ...props }) {
       </Modal.Header>
       <Modal.Body>
         <Stack gap={3}>
-          <CartItem data={itemData} />
+          <CartItem data={itemData} options={options} />
           {optionData.map((category, index) => (
-            <OptionTab key={index} data={category} />
+            <OptionTab
+              key={index}
+              data={category}
+              onDataClick={handleOptionClick}
+            />
           ))}
         </Stack>
       </Modal.Body>
