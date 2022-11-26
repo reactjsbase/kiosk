@@ -1,6 +1,6 @@
 import { Card, CloseButton, Col, Image, Row } from "react-bootstrap";
 import { useState } from "react";
-import NumberSpinner from "./NumberSpinner";
+import NumberPicker from "./NumberPicker";
 import bowl from "../images/bowl.png";
 
 function CartItem({ index, data, onRemove, ...props }) {
@@ -29,8 +29,9 @@ function CartItem({ index, data, onRemove, ...props }) {
         <Col>
           <Card.Body className="h-100 d-flex flex-column">
             <Card.Subtitle className="mb-2 text-muted">옵션목록</Card.Subtitle>
-            <NumberSpinner
+            <NumberPicker
               className="mt-auto"
+              minValue={1}
               value={quantity}
               onChange={handleChange}
             />
