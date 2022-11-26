@@ -1,6 +1,6 @@
 import { Card, Col, Image, Row, CloseButton } from "react-bootstrap";
 import { useState } from "react";
-import NumberSpinner from "./NumberSpinner";
+import NumberPicker from "./NumberPicker";
 import bowl from "../images/bowl.png";
 function CartItem({ index, data, onRemove, options, ...props }) {
   const [quantity, setQuantity] = useState(1);
@@ -28,9 +28,9 @@ function CartItem({ index, data, onRemove, options, ...props }) {
         <Col>
           <Card.Body className="h-100 d-flex flex-column">
             <Card.Subtitle className="mb-2 text-muted">{options}</Card.Subtitle>
-            <Card.Text></Card.Text>
-            <NumberSpinner
+            <NumberPicker
               className="mt-auto"
+              minValue={1}
               value={quantity}
               onChange={handleChange}
             />
