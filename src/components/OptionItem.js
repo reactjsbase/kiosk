@@ -5,7 +5,7 @@ function OptionItem({ data, onClick, selected }) {
     <Card
       style={{ width: "8rem", minWidth: "8rem" }}
       onClick={() => onClick(data)}
-      border={selected && "primary"}
+      border={selected && "success"}
     >
       <Card.Img
         style={{ background: "WhiteSmoke" }}

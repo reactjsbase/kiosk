@@ -3,7 +3,7 @@ import banner from "../images/banner.png";
 
 function Banner() {
   return (
-    <div className="text-center" style={{ background: "SeaGreen" }}>
+    <div className="text-center bg-success">
       <Image height="160" variant="top" src={banner} />
     </div>
   );

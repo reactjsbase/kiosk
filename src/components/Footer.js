@@ -70,7 +70,7 @@ function Footer({ cart, nextRoute }) {
         </Col>
         <Col className="d-grid mx-auto">
           <Button
-            variant="primary"
+            variant="success"
             size="lg"
             onClick={() => navigate(nextRoute)}
           >

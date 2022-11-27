@@ -57,6 +57,7 @@ function Option({ itemData, onAdd, onHide, ...props }) {
       </Modal.Body>
       <Modal.Footer>
         <Button
+          variant="success"
           onClick={() =>
             onAdd({ item: itemData, options: [...options], quantity })
           }

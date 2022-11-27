@@ -35,7 +35,7 @@ function Confirm({ cart, removeCartItem }) {
             취소
           </Button>
           <Button
-            variant="primary"
+            variant="success"
             size="lg"
             onClick={() => navigate("/payment")}
           >

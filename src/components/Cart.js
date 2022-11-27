@@ -4,7 +4,7 @@ import CartItem from "./CartItem";
 // 장바구니 컨테이너
 function Cart({ cart, updateQuantity, removeCartItem }) {
   return (
-    <div className="bg-primary">
+    <div className="bg-success">
       <Container fluid className="px-5 pt-3">
         <h2 className="text-white">
           <strong>카트</strong>
