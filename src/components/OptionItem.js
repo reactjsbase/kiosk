@@ -20,4 +20,5 @@ function OptionItem({ data, onClick, selected }) {
     </Card>
   );
 }
+
 export default OptionItem;

@@ -1,9 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { Image, Stack } from "react-bootstrap";
 import Banner from "../components/Banner";
+import { useEffect } from "react";
 
-function Home() {
+function Home({ clearCart }) {
   const navigate = useNavigate();
+
+  useEffect(() => clearCart(), []);
 
   return (
     <div className="vh-100 d-flex flex-column">

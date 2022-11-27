@@ -2,22 +2,32 @@ import { Card, Col, Image, Row, CloseButton } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import NumberPicker from "./NumberPicker";
 import bowl from "../images/bowl.png";
-function CartItem({ index, item, options, onRemove, imageSize = 5, ...props }) {
-  const [quantity, setQuantity] = useState(1);
+function CartItem({
+  index,
+  item,
+  options,
+  quantity,
+  onChange,
+  onRemove,
+  imageSize = 5,
+  ...props
+}) {
   const [price, setPrice] = useState(item.price);
 
   // 가격 계산
   useEffect(() => {
-    setPrice(item.price);
+    let price = item.price;
     options.forEach((category) => {
       category.items.forEach((option) => {
-        setPrice((price) => (price += option.price));
+        price += option.price;
       });
     });
-  }, [item, options]);
+
+    setPrice(price * quantity);
+  }, [item, options, quantity]);
 
   function handleChange(value) {
-    setQuantity(value);
+    onChange(value, index);
   }
 
   return (
@@ -74,7 +84,7 @@ function CartItem({ index, item, options, onRemove, imageSize = 5, ...props }) {
           </Card.Body>
         </Col>
         <Card.Footer className="text-end">
-          {(price * quantity).toLocaleString()}원
+          {price.toLocaleString()}원
         </Card.Footer>
       </Row>
     </Card>

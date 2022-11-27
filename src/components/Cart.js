@@ -2,11 +2,11 @@ import { Container, Stack } from "react-bootstrap";
 import CartItem from "./CartItem";
 
 // 장바구니 컨테이너
-function Cart({ cart, removeCartItem }) {
+function Cart({ cart, updateQuantity, removeCartItem }) {
   return (
-    <div style={{ background: "SeaGreen" }}>
+    <div className="bg-primary">
       <Container fluid className="px-5 pt-3">
-        <h2 style={{ color: "white" }}>
+        <h2 className="text-white">
           <strong>카트</strong>
         </h2>
       </Container>
@@ -18,6 +18,8 @@ function Cart({ cart, removeCartItem }) {
             key={index}
             item={data.item}
             options={data.options}
+            quantity={data.quantity}
+            onChange={updateQuantity}
             onRemove={removeCartItem}
           />
         ))}

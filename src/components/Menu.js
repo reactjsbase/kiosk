@@ -11,13 +11,13 @@ function Menu({ addCartItem, ...props }) {
   // 옵션창에 표시되는 아이템 데이터
   const [itemData, setItemData] = useState();
 
-  // 메뉴 아이템 클릭 시
+  // 메뉴 아이템 클릭 시 옵션창 띄우기
   function handleItemClick(data) {
-    setItemData(data);
+    setItemData({ ...data, quantity: 1 });
     setModalShow(true);
   }
 
-  // 카트에 아이템 추가 시
+  // 옵션창에서 추가 버튼 누를 시 카트에 아이템 추가
   function handleAdd(cartItem) {
     setModalShow(false);
     addCartItem(cartItem);
