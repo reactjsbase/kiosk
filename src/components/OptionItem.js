@@ -1,17 +1,11 @@
 import { Card } from "react-bootstrap";
-import { useEffect } from "react";
-import { run } from "holderjs";
 
 function OptionItem({ data, onClick, selected }) {
-  useEffect(() => {
-    run();
-  });
-
   return (
     <Card
       style={{ width: "8rem", minWidth: "8rem" }}
       onClick={() => onClick(data)}
-      border={selected ? "primary" : ""}
+      border={selected && "primary"}
     >
       <Card.Img
         style={{ background: "WhiteSmoke" }}
