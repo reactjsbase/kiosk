@@ -7,7 +7,7 @@ function OptionTab({ data, onDataClick }) {
 
   function onItemClick(option) {
     setSelected(option);
-    onDataClick(option);
+    onDataClick(option, data.title);
   }
 
   return (
@@ -15,12 +15,12 @@ function OptionTab({ data, onDataClick }) {
       <Card.Header>{data.title}</Card.Header>
       <Card.Body className="px-0">
         <Stack gap={3} className="px-3 d-flex flex-row overflow-auto">
-          {data.items.map((data, index) => (
+          {data.items.map((item, index) => (
             <OptionItem
               key={index}
-              data={data}
+              data={item}
               onClick={onItemClick}
-              selected={selected === data ? "selected" : ""}
+              selected={selected === item}
             />
           ))}
         </Stack>

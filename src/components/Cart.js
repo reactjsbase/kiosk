@@ -13,10 +13,11 @@ function Cart({ cart, removeCartItem }) {
       <Stack gap={3} className="px-5 pb-4 d-flex flex-row overflow-auto">
         {cart.map((data, index) => (
           <CartItem
-            style={{ width: "20rem", minWidth: "20rem" }}
+            style={{ width: "22rem", minWidth: "22rem" }}
             index={index}
             key={index}
-            data={data}
+            item={data.item}
+            options={data.options}
             onRemove={removeCartItem}
           />
         ))}
