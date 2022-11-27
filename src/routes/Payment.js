@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button, Image } from "react-bootstrap";
 import Banner from "../components/Banner";
+import payment from "../images/payment.png";
 
 function Payment() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ function Payment() {
         <strong>결제완료 화면은 잠시후 자동으로 닫힙니다.</strong>
       </h5>
       <div className="text-center">
-        <Image width={580} src="/payment.png" />
+        <Image width={512} src={payment} />
       </div>
 
       <h2 className="p-5 text-center">
