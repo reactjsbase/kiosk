@@ -48,7 +48,7 @@ function Footer({ cart, nextRoute }) {
           </Card>
         </Col>
         <Col className="d-grid mx-auto">
-          <Button variant="secondary" size="lg" onClick={() => navigate("/")}>
+          <Button variant="secondary" size="lg" onClick={() => navigate(-1)}>
             취소
           </Button>
         </Col>
@@ -72,7 +72,11 @@ function Footer({ cart, nextRoute }) {
           <Button
             variant="success"
             size="lg"
-            onClick={() => navigate(nextRoute)}
+            onClick={() => {
+              if (quantity) {
+                navigate(nextRoute);
+              }
+            }}
           >
             결제
           </Button>

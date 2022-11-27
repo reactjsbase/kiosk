@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Container, Stack } from "react-bootstrap";
 import Banner from "../components/Banner";
 import CartItem from "../components/CartItem";
+import Footer from "../components/Footer";
 
 function Confirm({ cart, removeCartItem }) {
   const navigate = useNavigate();
@@ -25,24 +26,7 @@ function Confirm({ cart, removeCartItem }) {
           </Stack>
         </div>
       </Container>
-      <div>
-        <Stack gap={3} className="p-3">
-          <Button
-            variant="outline-danger"
-            size="lg"
-            onClick={() => navigate("/order")}
-          >
-            취소
-          </Button>
-          <Button
-            variant="success"
-            size="lg"
-            onClick={() => navigate("/payment")}
-          >
-            결제
-          </Button>
-        </Stack>
-      </div>
+      <Footer cart={cart} nextRoute="/payment" />
     </div>
   );
 }
