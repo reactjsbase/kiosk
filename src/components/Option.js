@@ -19,7 +19,11 @@ function Option({ itemData, onAdd, onHide, ...props }) {
     setOptions((value) => {
       value.forEach((category) => {
         if (category.title === categoryTitle) {
-          category.items[0] = option;
+          if (category.items[0] !== option) {
+            category.items[0] = option;
+          } else {
+            category.items = [];
+          }
         }
       });
 

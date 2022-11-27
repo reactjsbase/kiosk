@@ -6,7 +6,11 @@ function OptionTab({ data, onDataClick }) {
   const [selected, setSelected] = useState();
 
   function onItemClick(option) {
-    setSelected(option);
+    if (selected !== option) {
+      setSelected(option);
+    } else {
+      setSelected();
+    }
     onDataClick(option, data.title);
   }
 
