@@ -3,6 +3,11 @@
     "title": "잼",
     "items": [
       {
+        "id": "jam-honey",
+        "title": "꿀",
+        "price": 300
+      },
+      {
         "id": "jam-strawberry",
         "title": "딸기청",
         "price": 600
@@ -25,11 +30,6 @@
       {
         "id": "jam-peach",
         "title": "복숭아잼",
-        "price": 600
-      },
-      {
-        "id": "jam-honey",
-        "title": "꿀",
         "price": 600
       }
     ]
