@@ -15,19 +15,15 @@ function NumberPicker({
 
   function onIncrease() {
     if (number < maxValue) {
-      setNumber((value) => {
-        onChange(++value);
-        return value;
-      });
+      onChange(number + 1);
+      setNumber((value) => ++value);
     }
   }
 
   function onDecrease() {
     if (number > minValue) {
-      setNumber((value) => {
-        onChange(--value);
-        return value;
-      });
+      onChange(number - 1);
+      setNumber((value) => --value);
     }
   }
 
