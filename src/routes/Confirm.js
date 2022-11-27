@@ -1,32 +1,39 @@
-import { useNavigate } from "react-router-dom";
-import { Button, Container, Stack } from "react-bootstrap";
+import { Container, Stack } from "react-bootstrap";
 import Banner from "../components/Banner";
 import CartItem from "../components/CartItem";
 import Footer from "../components/Footer";
 
-function Confirm({ cart, removeCartItem }) {
-  const navigate = useNavigate();
+function Confirm({ cart, updateQuantity, removeCartItem }) {
   return (
     <div className="vh-100 d-flex flex-column">
       <Banner />
-      <Container className="p-3 d-flex flex-column flex-fill">
-        <h2>주문 확인</h2>
-        <div className="flex-fill position-relative overflow-auto">
-          <Stack gap={3} className="position-absolute">
-            {cart.map((data, index) => (
-              <CartItem
-                key={index}
-                index={index}
-                item={data.item}
-                options={data.options}
-                imageSize={4}
-                onRemove={removeCartItem}
-              />
-            ))}
-          </Stack>
+      <Container fluid className="p-0 d-flex flex-column flex-fill">
+        <div className="px-5 pt-4 pb-3 bg-dark text-white">
+          <h2>주문 확인</h2>
+        </div>
+        <div className="px-5 d-flex flex-fill">
+          <div className="d-flex flex-fill position-relative overflow-auto justify-content-center">
+            <Stack gap={3} className="position-absolute py-4">
+              {cart.map((data, index) => (
+                <CartItem
+                  style={{ maxWidth: "50rem" }}
+                  key={index}
+                  index={index}
+                  item={data.item}
+                  options={data.options}
+                  quantity={data.quantity}
+                  onChange={updateQuantity}
+                  onRemove={removeCartItem}
+                  imageSize={4}
+                />
+              ))}
+            </Stack>
+          </div>
         </div>
       </Container>
-      <Footer cart={cart} nextRoute="/payment" />
+      <div>
+        <Footer cart={cart} nextRoute="/payment" />
+      </div>
     </div>
   );
 }

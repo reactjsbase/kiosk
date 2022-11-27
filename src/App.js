@@ -50,7 +50,13 @@ function App() {
         />
         <Route
           path="/confirm"
-          element={<Confirm cart={cart} removeCartItem={removeCartItem} />}
+          element={
+            <Confirm
+              cart={cart}
+              updateQuantity={updateQuantity}
+              removeCartItem={removeCartItem}
+            />
+          }
         />
         <Route path="/payment" element={<Payment />} />
       </Routes>
