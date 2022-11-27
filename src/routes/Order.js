@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button, Stack } from "react-bootstrap";
+import { Button, Card, Col, Row, Stack } from "react-bootstrap";
 import Banner from "../components/Banner";
 import Cart from "../components/Cart";
 import Menu from "../components/Menu";
@@ -7,19 +7,17 @@ import Menu from "../components/Menu";
 function Order({ cart, addCartItem, removeCartItem }) {
   const navigate = useNavigate();
 
-  const priceAdd =() => {
-    const itemPrice = cart.map((item)=>{
-      return item.price
-    })
+  const priceAdd = () => {
+    const itemPrice = cart.map((item) => {
+      return item.price;
+    });
 
     const result = itemPrice.reduce(function add(sum, currValue) {
       return sum + currValue;
     }, 0);
 
-    return result
-  }
-
-
+    return result;
+  };
 
   return (
     <div className="vh-100 d-flex flex-column">
@@ -30,32 +28,48 @@ function Order({ cart, addCartItem, removeCartItem }) {
       />
       <div>
         <Cart cart={cart} removeCartItem={removeCartItem} />
-        <Stack gap={3} className="p-3">
-          <div className="row justify-content-start">
-            <div className="card col-8">
-              <div className="card-body">
-                <span style={{paddingRight:"10px"}}>수량</span>
-                <span>{cart.length.toLocaleString()}</span>
-              </div>
-            </div>
-            <div class="d-grid col-4 mx-auto">
+        <Stack gap={3} className="px-3 py-4 bg-dark">
+          <Row>
+            <Col xs={8}>
+              <Card>
+                <Card.Body>
+                  <Stack
+                    gap={2}
+                    direction="horizontal"
+                    className="align-items-start"
+                  >
+                    <Card.Title className="m-0">수량</Card.Title>
+                    {cart.length}
+                  </Stack>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col className="d-grid mx-auto">
               <Button
-                variant="outline-danger"
+                variant="secondary"
                 size="lg"
                 onClick={() => navigate("/")}
               >
                 취소
               </Button>
-            </div>
-          </div>
-          <div className="row justify-content-start">
-            <div className="card col-8">
-              <div className="card-body">
-                <span style={{paddingRight:"10px"}}>합계</span>
-                <span>{priceAdd().toLocaleString()}</span>
-              </div>
-            </div>
-            <div className="d-grid col-4 mx-auto">
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={8}>
+              <Card>
+                <Card.Body>
+                  <Stack
+                    gap={2}
+                    direction="horizontal"
+                    className="align-items-start"
+                  >
+                    <Card.Title className="m-0">합계</Card.Title>
+                    {priceAdd().toLocaleString()}원
+                  </Stack>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col className="d-grid mx-auto">
               <Button
                 variant="primary"
                 size="lg"
@@ -63,8 +77,8 @@ function Order({ cart, addCartItem, removeCartItem }) {
               >
                 결제
               </Button>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Stack>
       </div>
     </div>
