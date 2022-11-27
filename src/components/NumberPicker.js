@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
 import { BsDash, BsPlus } from "react-icons/bs";
 
@@ -11,17 +11,23 @@ function NumberPicker({
 }) {
   const [number, setNumber] = useState(value);
 
+  useEffect(() => setNumber(value), [value]);
+
   function onIncrease() {
     if (number < maxValue) {
-      onChange(number + 1);
-      setNumber((value) => value + 1);
+      setNumber((value) => {
+        onChange(++value);
+        return value;
+      });
     }
   }
 
   function onDecrease() {
     if (number > minValue) {
-      onChange(number - 1);
-      setNumber((value) => value - 1);
+      setNumber((value) => {
+        onChange(--value);
+        return value;
+      });
     }
   }
 
