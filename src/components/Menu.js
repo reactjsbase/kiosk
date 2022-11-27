@@ -34,7 +34,9 @@ function Menu({ addCartItem, ...props }) {
         <Nav variant="tabs">
           {menuData.map((category, index) => (
             <Nav.Item key={index}>
-              <Nav.Link eventKey={index}>{category.title}</Nav.Link>
+              <Nav.Link eventKey={index}>
+                <h5 style={{ fontWeight: 600 }}>{category.title}</h5>
+              </Nav.Link>
             </Nav.Item>
           ))}
         </Nav>
