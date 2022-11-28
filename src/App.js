@@ -11,13 +11,31 @@ function App() {
 
   // 카트에 아이템 추가
   function addCartItem(cartItem) {
-    setCart((value) => [...value, cartItem]);
+    let hasItem = false;
+
+    // 동일 아이템이 있는 경우
+    cart.every((item, index) => {
+      if (
+        JSON.stringify(item.item) === JSON.stringify(cartItem.item) &&
+        JSON.stringify(item.options) === JSON.stringify(cartItem.options)
+      ) {
+        setCart((value) => {
+          value[index].quantity += cartItem.quantity;
+          return [...value];
+        });
+        hasItem = true;
+        return false;
+      }
+      return true;
+    });
+
+    // 동일 아이템이 없는 경우
+    if (!hasItem) setCart((value) => [...value, cartItem]);
   }
 
   // 카트에 아이템 제거
   function removeCartItem(index) {
-    setCart((value) => value.filter((_, i) => i !== index));
-    setCart((value) => [...value]);
+    setCart((value) => [...value.filter((_, i) => i !== index)]);
   }
 
   // 카트 비우기
