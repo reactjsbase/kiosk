@@ -6,7 +6,7 @@ import { useEffect } from "react";
 function Home({ clearCart }) {
   const navigate = useNavigate();
 
-  useEffect(clearCart, []);
+  useEffect(() => clearCart(), [clearCart]);
 
   return (
     <div className="vh-100 d-flex flex-column">

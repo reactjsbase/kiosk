@@ -3,7 +3,7 @@ import Order from "./routes/Order";
 import Home from "./routes/Home";
 import Confirm from "./routes/Confirm";
 import Payment from "./routes/Payment";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 function App() {
   // 카트
@@ -39,9 +39,7 @@ function App() {
   }
 
   // 카트 비우기
-  function clearCart() {
-    setCart([]);
-  }
+  const clearCart = useCallback(() => setCart([]), []);
 
   // 카트 아이템 수량 변경
   function updateQuantity(quantity, index) {
