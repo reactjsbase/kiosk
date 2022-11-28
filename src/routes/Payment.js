@@ -2,9 +2,18 @@ import { useNavigate } from "react-router-dom";
 import { Button, Image, Stack } from "react-bootstrap";
 import Banner from "../components/Banner";
 import payment from "../images/payment.png";
+import { useEffect } from "react";
 
 function Payment() {
   const navigate = useNavigate();
+
+  // 10초 후 홈 화면으로 이동
+  useEffect(() => {
+    const goHome = setTimeout(() => navigate("/"), 10000);
+
+    return () => clearTimeout(goHome);
+  }, [navigate]);
+
   return (
     <div className="vh-100 d-flex flex-column">
       <Banner />
