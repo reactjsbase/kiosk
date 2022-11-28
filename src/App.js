@@ -56,7 +56,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home clearCart={clearCart} />} />
         <Route
-          path="/order"
+          path="/order/:id"
           element={
             <Order
               cart={cart}
@@ -67,7 +67,7 @@ function App() {
           }
         />
         <Route
-          path="/confirm"
+          path="/confirm/:id"
           element={
             <Confirm
               cart={cart}

@@ -6,7 +6,7 @@ import { useEffect } from "react";
 function Home({ clearCart }) {
   const navigate = useNavigate();
 
-  useEffect(() => clearCart(), []);
+  useEffect(clearCart, []);
 
   return (
     <div className="vh-100 d-flex flex-column">
@@ -18,7 +18,7 @@ function Home({ clearCart }) {
             background: "none",
             cursor: "pointer",
           }}
-          onClick={() => navigate("/order")}
+          onClick={() => navigate("/order/forhere")}
         >
           <h1 style={{ fontSize: 64, fontWeight: 600 }}>
             <u style={{ textDecorationColor: "RoyalBlue" }}>매장</u>
@@ -50,7 +50,7 @@ function Home({ clearCart }) {
             background: "none",
             cursor: "pointer",
           }}
-          onClick={() => navigate("/order")}
+          onClick={() => navigate("/order/togo")}
         >
           <h1 style={{ fontSize: 64, fontWeight: 600 }}>
             <u style={{ textDecorationColor: "RoyalBlue" }}>포장</u>
